@@ -41,6 +41,15 @@ const TeamSection = () => {
       image: "/lovable-uploads/a702b0c3-75e3-4de0-aa50-eed60552c3d8.png"
     }
   ];
+  
+  const operationsTeam = [
+    {
+      name: "Ram Kumar",
+      position: "Transportation Incharge / Truck Driver",
+      education: "",
+      image: "/lovable-uploads/a5c22be3-a1dd-4d86-bfc7-af938320dabb.png"
+    }
+  ];
 
   return (
     <section className="py-16 bg-gray-50 dark:bg-gray-800">
@@ -143,7 +152,7 @@ const TeamSection = () => {
         </div>
 
         {/* Technical Team */}
-        <div>
+        <div className="mb-16">
           <motion.h3 
             className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-8 text-center font-lovelace"
             initial={{ opacity: 0, y: 20 }}
@@ -162,6 +171,44 @@ const TeamSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+              >
+                <div className="w-36 h-36 mx-auto mt-6 overflow-hidden rounded-full">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                  />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">{member.name}</h3>
+                  <p className="text-harit-600 dark:text-harit-400 font-medium mb-2 text-base">{member.position}</p>
+                  {member.education && <p className="text-gray-500 dark:text-gray-400 text-sm">{member.education}</p>}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Operations Team */}
+        <div>
+          <motion.h3 
+            className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-8 text-center font-lovelace"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            Operations Team
+          </motion.h3>
+          <div className="flex justify-center">
+            {operationsTeam.map((member, index) => (
+              <motion.div 
+                key={index} 
+                className="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition-all duration-300 max-w-sm mx-auto" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
               >
                 <div className="w-36 h-36 mx-auto mt-6 overflow-hidden rounded-full">
                   <img 
