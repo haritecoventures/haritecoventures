@@ -44,7 +44,7 @@ const TeamSection = () => {
   
   const operationsTeam = [
     {
-      name: "Ram Kumar",
+      name: "Kayyum Kuraishi",
       position: "Transportation Incharge / Truck Driver",
       education: "",
       image: "/lovable-uploads/a5c22be3-a1dd-4d86-bfc7-af938320dabb.png"
