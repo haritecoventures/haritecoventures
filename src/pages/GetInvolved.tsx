@@ -135,7 +135,7 @@ const GetInvolved = () => {
                       </Link>
                     </Button>
                     <Button asChild variant="outline" className="border-harit-500 text-harit-600 hover:bg-harit-50">
-                      <a href="mailto:info@haritecoventures.com">
+                      <a href="mailto:info@haritecoventures.com.np">
                         Email Us Directly
                       </a>
                     </Button>
