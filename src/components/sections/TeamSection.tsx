@@ -29,10 +29,10 @@ const TeamSection = () => {
 
   const technicalTeam = [
     {
-      name: "Niraj Pandey",
+      name: "Arjun Paudel",
       position: "Technology Officer",
-      education: "Computer Science Student at Northern Kentucky University (NKU)",
-      image: "/lovable-uploads/882707d8-1395-48b8-b8d2-464180d8c046.png"
+      education: "",
+      image: "/lovable-uploads/bab26263-93b4-4ea2-a5a8-669ca3d498e5.png"
     },
     {
       name: "Hemanta Sharma",
@@ -172,7 +172,7 @@ const TeamSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
               >
-                <div className="w-36 h-36 mx-auto mt-6 overflow-hidden rounded-full">
+                <div className="w-36 h-36 mx-auto mt-6 overflow-hidden rounded-full bg-white">
                   <img 
                     src={member.image} 
                     alt={member.name} 
