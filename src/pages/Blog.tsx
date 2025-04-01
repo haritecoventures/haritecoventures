@@ -110,7 +110,7 @@ const Blog = () => {
                           <span>{article.date}</span>
                         </div>
                         
-                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-lovelace">
+                        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6 font-lovelace">
                           {article.title}
                         </h1>
                         
@@ -135,7 +135,7 @@ const Blog = () => {
                       Blog & Updates
                     </motion.span>
                     <motion.h1 
-                      className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 font-lovelace"
+                      className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6 font-lovelace"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.1 }}
@@ -200,3 +200,4 @@ const Blog = () => {
 };
 
 export default Blog;
+
