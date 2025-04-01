@@ -96,27 +96,29 @@ const Blog = () => {
                   </div>
                   
                   <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden border border-gray-100 dark:border-gray-700">
-                    <div className="aspect-w-16 aspect-h-9 max-h-[500px]">
-                      <img 
-                        src={article.image} 
-                        alt={article.title} 
-                        className="w-full h-full object-cover" 
-                      />
-                    </div>
-                    <div className="p-6 sm:p-8 md:p-10">
-                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        <span>{article.date}</span>
+                    <div className="grid grid-cols-1">
+                      <div className="aspect-w-16 aspect-h-9 max-h-[400px]">
+                        <img 
+                          src={article.image} 
+                          alt={article.title} 
+                          className="w-full h-full object-cover" 
+                        />
                       </div>
-                      
-                      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-lovelace">
-                        {article.title}
-                      </h1>
-                      
-                      <div 
-                        className="prose prose-lg max-w-none text-gray-600 dark:text-gray-300 prose-headings:text-gray-900 prose-headings:dark:text-white prose-headings:font-lovelace"
-                        dangerouslySetInnerHTML={{ __html: article.content }}
-                      />
+                      <div className="p-6 sm:p-8 md:p-10">
+                        <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          <span>{article.date}</span>
+                        </div>
+                        
+                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-lovelace">
+                          {article.title}
+                        </h1>
+                        
+                        <div 
+                          className="prose prose-lg max-w-none text-gray-600 dark:text-gray-300 prose-headings:text-gray-900 prose-headings:dark:text-white prose-headings:font-lovelace"
+                          dangerouslySetInnerHTML={{ __html: article.content }}
+                        />
+                      </div>
                     </div>
                   </div>
                 </motion.div>
