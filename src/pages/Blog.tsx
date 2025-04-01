@@ -96,15 +96,17 @@ const Blog = () => {
                   </div>
                   
                   <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden border border-gray-100 dark:border-gray-700">
-                    <div className="grid grid-cols-1">
-                      <div className="aspect-w-16 aspect-h-9 max-h-[400px]">
-                        <img 
-                          src={article.image} 
-                          alt={article.title} 
-                          className="w-full h-full object-cover" 
-                        />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+                      <div className="md:col-span-1 h-full">
+                        <div className="h-full w-full">
+                          <img 
+                            src={article.image} 
+                            alt={article.title} 
+                            className="w-full h-full object-cover" 
+                          />
+                        </div>
                       </div>
-                      <div className="p-6 sm:p-8 md:p-10">
+                      <div className="p-6 sm:p-8 md:col-span-2">
                         <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                           <Calendar className="h-4 w-4 mr-2" />
                           <span>{article.date}</span>
@@ -115,7 +117,7 @@ const Blog = () => {
                         </h1>
                         
                         <div 
-                          className="prose prose-lg max-w-none text-gray-600 dark:text-gray-300 prose-headings:text-gray-900 prose-headings:dark:text-white prose-headings:font-lovelace"
+                          className="prose prose-lg max-w-none text-gray-600 dark:text-gray-300 prose-headings:text-gray-900 prose-headings:dark:text-white prose-headings:font-lovelace prose-h2:text-xl prose-h2:md:text-2xl prose-h3:text-lg prose-h3:md:text-xl"
                           dangerouslySetInnerHTML={{ __html: article.content }}
                         />
                       </div>
@@ -161,20 +163,22 @@ const Blog = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 + (index * 0.1) }}
                       >
-                        <div className="grid grid-cols-1 md:grid-cols-3">
-                          <div className="aspect-w-16 aspect-h-9 md:aspect-auto md:h-full">
-                            <img 
-                              src={post.image} 
-                              alt={post.title} 
-                              className="w-full h-full object-cover"
-                            />
+                        <div className="grid grid-cols-1 md:grid-cols-4">
+                          <div className="md:col-span-1 h-full">
+                            <div className="h-full">
+                              <img 
+                                src={post.image} 
+                                alt={post.title} 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
                           </div>
-                          <div className="p-6 sm:p-8 md:col-span-2">
+                          <div className="p-6 sm:p-8 md:col-span-3">
                             <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                               <Calendar className="h-4 w-4 mr-2" />
                               <span>{post.date}</span>
                             </div>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-lovelace">{post.title}</h2>
+                            <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-lovelace">{post.title}</h2>
                             <p className="text-gray-600 dark:text-gray-300 mb-6">{post.excerpt}</p>
                             <button 
                               onClick={() => setSelectedArticle(post.id)}
@@ -200,4 +204,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
